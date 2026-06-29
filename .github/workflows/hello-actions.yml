@@ -1,1 +1,14 @@
-Created .github folder
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+name: Hello GitHub Actions
+ 
+on: workflow_dispatch
+ 
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show basic runner information
+        run: |
+          echo "Hello from GitHub Actions"
+          pwd
+          ls -la
