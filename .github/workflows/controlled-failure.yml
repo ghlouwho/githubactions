@@ -1,0 +1,10 @@
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+name: Controlled Failure Example
+ 
+on: workflow_dispatch
+jobs:
+  fail-on-purpose:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fail intentionally
+        run: exit 1
